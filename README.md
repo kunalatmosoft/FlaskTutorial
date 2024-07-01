@@ -1,40 +1,68 @@
-# FlaskIntroduction
+### Basic Python Commands
 
-This repo has been updated to work with `Python v3.8` and up.
+- **Check Python Version**:
+  ```bash
+  python --version
+  python3 --version
+  ```
 
-## How To Run
-1. Install `virtualenv`:
-```
-$ pip install virtualenv
-```
+### Package Management with `pip`
 
-2. Open a terminal in the project root directory and run:
-```
-$ virtualenv env
-```
+- **Show Installed Packages**:
+  ```bash
+  pip list
+  ```
 
-3. Then run the command:
-```
-$ .\env\Scripts\activate
-```
+- **Install a Package**:
+  ```bash
+  pip install package_name
+  ```
 
-4. Then install the dependencies:
-```
-$ (env) pip install -r requirements.txt
-```
+- **Uninstall a Package**:
+  ```bash
+  pip uninstall package_name
+  ```
 
-5. Finally start the web server:
-```
-$ (env) python app.py
-```
+- **Upgrade a Package**:
+  ```bash
+  pip install --upgrade package_name
+  ```
 
-This server will start on port 5000 by default. You can change this in `app.py` by changing the following line to this:
+- **Show Package Information**:
+  ```bash
+  pip show package_name
+  ```
 
-```python
-if __name__ == "__main__":
-    app.run(debug=True, port=<desired port>)
-```
+- **Freeze Installed Packages**:
+  ```bash
+  pip freeze > requirements.txt
+  ```
 
-## Contributing
+- **Install Packages from a Requirements File**:
+  ```bash
+  pip install -r requirements.txt
+  ```
 
-Since this is a repository for a tutorial, the code should remain the same as the code that was shown in the tutorial. Any pull requests that don't address security flaws or fixes for language updates will be automatically closed. Style changes, adding libraries, etc are not valid changes for submitting a pull request.
+### Virtual Environment Management
+
+- **Create a Virtual Environment**:
+  ```bash
+  python -m venv env_name
+  python3 -m venv env_name
+  ```
+
+- **Activate a Virtual Environment**:
+  - **Windows**:
+    ```bash
+    .\env_name\Scripts\activate
+    ```
+  - **MacOS/Linux**:
+    ```bash
+    source env_name/bin/activate
+    ```
+
+- **Deactivate a Virtual Environment**:
+  ```bash
+  deactivate
+  ```
+
